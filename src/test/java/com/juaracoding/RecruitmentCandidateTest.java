@@ -25,8 +25,13 @@ public class RecruitmentCandidateTest {
     @Given("I enter a username and password")
     public void I_enter_a_username_and_password(){
         loginPage.loginUsernamePassword("Admin","admin123");
-        loginPage.setLoginBtn();
         extentTest.log(LogStatus.PASS,"I enter a valid username and password");
+    }
+
+    @And("I click login")
+    public void i_click_login(){
+        loginPage.setLoginBtn();
+        extentTest.log(LogStatus.PASS,"I click login");
     }
     @And("Admin go to menu Recruitment")
     public void admin_go_to_menu_recruitment(){
